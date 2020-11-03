@@ -10,7 +10,6 @@ public class Locatario extends Persona{
 	private String usuario;
 	private String contraseña;
 	private TipoTrabajador tipoTrabajador;
-	Set<Contrato> Contrato = new LinkedHashSet<Contrato>();
 	public String getActividadDedicada() {
 		return actividadDedicada;
 	}
@@ -47,21 +46,15 @@ public class Locatario extends Persona{
 	public void setTipoTrabajador(TipoTrabajador tipoTrabajador) {
 		this.tipoTrabajador = tipoTrabajador;
 	}
-	public Set<Contrato> getContrato() {
-		return Contrato;
-	}
-	public void setContrato(Set<Contrato> contrato) {
-		Contrato = contrato;
-	}
 	@Override
 	public String toString() {
 		return "Locatario [actividadDedicada=" + actividadDedicada + ", estudiante=" + estudiante + ", ingresos="
 				+ ingresos + ", usuario=" + usuario + ", contraseña=" + contraseña + ", tipoTrabajador="
-				+ tipoTrabajador + ", Contrato=" + Contrato + "]";
+				+ tipoTrabajador + "]";
 	}
 	public Locatario(String nombreYApellido, Double dNI, String estadoCivil, String domicilio, Double telefono,
 			String mail, String actividadDedicada, boolean estudiante, double ingresos, String usuario,
-			String contraseña, TipoTrabajador tipoTrabajador, Set<modelo.Contrato> contrato) {
+			String contraseña, TipoTrabajador tipoTrabajador) {
 		super(nombreYApellido, dNI, estadoCivil, domicilio, telefono, mail);
 		this.actividadDedicada = actividadDedicada;
 		this.estudiante = estudiante;
@@ -69,7 +62,6 @@ public class Locatario extends Persona{
 		this.usuario = usuario;
 		this.contraseña = contraseña;
 		this.tipoTrabajador = tipoTrabajador;
-		Contrato = contrato;
 	}
 	
 

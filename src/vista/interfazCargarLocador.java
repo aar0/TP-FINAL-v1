@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import controlador.controlador;
+import controlador.Controlador;
 
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -21,7 +21,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
-import controlador.controlador;
+import controlador.Controlador;
 import javax.swing.JButton;
 public class interfazCargarLocador extends JFrame {
 
@@ -31,13 +31,13 @@ public class interfazCargarLocador extends JFrame {
 	private JTextField textField_2;
 	private JTextField textField_3;
 	private JTextField textField_4;
-	private controlador controlador;
+	private Controlador controlador;
 	
-	public interfazCargarLocador(controlador cont) {
+	public interfazCargarLocador(Controlador cont) {
 		controlador = cont;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 308, 321);
-		
+		this.setLocationRelativeTo(null);//ejecuta en el centro
 		JMenuBar menuBar = new JMenuBar();
 		JMenuItem inicio=new JMenuItem("Volver");
 		JMenu persona=new JMenu("Persona");
@@ -172,6 +172,11 @@ public class interfazCargarLocador extends JFrame {
 		contentPane.add(lblCrearLocador);
 		
 		JButton btnNewButton = new JButton("Cargar");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controlador.agregar();
+			}
+		});
 		btnNewButton.setBounds(96, 227, 85, 21);
 		contentPane.add(btnNewButton);
 	}

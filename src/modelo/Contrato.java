@@ -5,6 +5,7 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class Contrato {
+	private long id;
 	private Date primerFechaPago;
 	private Date segundaFechaPago;
 	private int recargoFijo;
@@ -13,6 +14,14 @@ public class Contrato {
 	private Date inicioDeContrato;
 	private Date finDeContrato;
 	Set<Arancel> arancel = new LinkedHashSet<Arancel>();
+	private Locador Locador;
+	private Locatario Locatario;
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
 	public Date getPrimerFechaPago() {
 		return primerFechaPago;
 	}
@@ -61,16 +70,30 @@ public class Contrato {
 	public void setArancel(Set<Arancel> arancel) {
 		this.arancel = arancel;
 	}
+	public Locador getLocador() {
+		return Locador;
+	}
+	public void setLocador(Locador locador) {
+		Locador = locador;
+	}
+	public Locatario getLocatario() {
+		return Locatario;
+	}
+	public void setLocatario(Locatario locatario) {
+		Locatario = locatario;
+	}
 	@Override
 	public String toString() {
-		return "Contrato [primerFechaPago=" + primerFechaPago + ", segundaFechaPago=" + segundaFechaPago
+		return "Contrato [id=" + id + ", primerFechaPago=" + primerFechaPago + ", segundaFechaPago=" + segundaFechaPago
 				+ ", recargoFijo=" + recargoFijo + ", valorBaseRecargoProporcional=" + valorBaseRecargoProporcional
 				+ ", comision=" + comision + ", inicioDeContrato=" + inicioDeContrato + ", finDeContrato="
-				+ finDeContrato + ", arancel=" + arancel + "]";
+				+ finDeContrato + ", arancel=" + arancel + ", Locador=" + Locador + ", Locatario=" + Locatario + "]";
 	}
-	public Contrato(Date primerFechaPago, Date segundaFechaPago, int recargoFijo, int valorBaseRecargoProporcional,
-			Comision comision, Date inicioDeContrato, Date finDeContrato, Set<Arancel> arancel) {
+	public Contrato(long id, Date primerFechaPago, Date segundaFechaPago, int recargoFijo,
+			int valorBaseRecargoProporcional, Comision comision, Date inicioDeContrato, Date finDeContrato,
+			Set<Arancel> arancel, modelo.Locador locador, modelo.Locatario locatario) {
 		super();
+		this.id = id;
 		this.primerFechaPago = primerFechaPago;
 		this.segundaFechaPago = segundaFechaPago;
 		this.recargoFijo = recargoFijo;
@@ -79,6 +102,7 @@ public class Contrato {
 		this.inicioDeContrato = inicioDeContrato;
 		this.finDeContrato = finDeContrato;
 		this.arancel = arancel;
+		Locador = locador;
+		Locatario = locatario;
 	}
-	
 }

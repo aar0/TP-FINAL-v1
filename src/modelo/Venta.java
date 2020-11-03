@@ -22,13 +22,12 @@ public class Venta extends Contrato{
 	public String toString() {
 		return "Venta [cantidadDeAranceles=" + cantidadDeAranceles + ", inmueble=" + inmueble + "]";
 	}
-	public Venta(Date primerFechaPago, Date segundaFechaPago, int recargoFijo, int valorBaseRecargoProporcional,
-			Comision comision, Date inicioDeContrato, Date finDeContrato, Set<Arancel> arancel, int cantidadDeAranceles,
-			Inmueble inmueble) {
-		super(primerFechaPago, segundaFechaPago, recargoFijo, valorBaseRecargoProporcional, comision, inicioDeContrato,
-				finDeContrato, arancel);
+	public Venta(long id, Date primerFechaPago, Date segundaFechaPago, int recargoFijo, int valorBaseRecargoProporcional,
+			Comision comision, Date inicioDeContrato, Date finDeContrato, Set<Arancel> arancel, modelo.Locador locador,
+			modelo.Locatario locatario, int cantidadDeAranceles, Inmueble inmueble) {
+		super(id, primerFechaPago, segundaFechaPago, recargoFijo, valorBaseRecargoProporcional, comision,
+				inicioDeContrato, finDeContrato, arancel, locador, locatario);
 		this.cantidadDeAranceles = cantidadDeAranceles;
 		this.inmueble = inmueble;
 	}
-	
 }

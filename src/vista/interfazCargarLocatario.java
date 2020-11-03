@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import controlador.controlador;
+import controlador.Controlador;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
@@ -25,7 +25,7 @@ import javax.swing.JTable;
 public class interfazCargarLocatario extends JFrame {
 
 	private JPanel contentPane;
-	private controlador controlador;
+	private Controlador controlador;
 	private JTextField textField;
 	private JMenuBar menuBar;
 	private JTextField textField_1;
@@ -36,11 +36,11 @@ public class interfazCargarLocatario extends JFrame {
 	private JTextField textField_6;
 	private JTextField textField_7;
 	
-	public interfazCargarLocatario(controlador cont) {
+	public interfazCargarLocatario(Controlador cont) {
 		controlador = cont;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 559, 302);
-		
+		this.setLocationRelativeTo(null);//ejecuta en el centro
 		menuBar = new JMenuBar();
 		JMenuItem inicio=new JMenuItem("Volver");
 		JMenu persona=new JMenu("Persona");

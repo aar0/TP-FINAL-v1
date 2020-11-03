@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import controlador.controlador;
+import controlador.Controlador;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -21,14 +21,14 @@ import javax.swing.SwingConstants;
 public class VentanaPrincipal extends JFrame {
 
 	private JPanel contentPane;
-	private controlador controlador;
+	private Controlador controlador;
 	
-	public VentanaPrincipal(controlador cont) {
+	public VentanaPrincipal(Controlador cont) {
 		controlador = cont;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		getContentPane().setLayout(null);
-		
+		this.setLocationRelativeTo(null);//ejecuta en el centro
 		JMenuBar menuBar = new JMenuBar();
 		JMenu persona=new JMenu("Persona");
 		JMenu contrato=new JMenu("Contrato");
