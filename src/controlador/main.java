@@ -6,10 +6,10 @@ import javax.swing.JOptionPane;
 
 import vista.VentanaPrincipal;
 import controlador.*;
-
+import util.NotificacionError;
 public class main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws NotificacionError {
 		Persistencia persistencia = null;
 		Controlador controlador = null;
 
@@ -43,26 +43,8 @@ public class main {
 			 * Se asegura de que se cierre la conexión de la base de datos.
 			 */
 			if (controlador != null) {
-				try {
-					controlador.desconectarBaseDatos();
-				} catch (NotificacionError e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
+				controlador.desconectarBaseDatos();
 			}
 		}
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Controlador cont = new Controlador();
-					VentanaPrincipal frame = new VentanaPrincipal(cont);
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-
 	}
-
 }
