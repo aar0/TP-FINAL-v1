@@ -1,5 +1,7 @@
 package DAO;
 
-public interface ArancelDAO extends DAO<Arancel, Int>{
+import modelo.Arancel;
+
+public interface ArancelDAO extends DAO<Arancel, Long>{
 	
 }

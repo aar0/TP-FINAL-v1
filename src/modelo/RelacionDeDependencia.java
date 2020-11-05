@@ -16,10 +16,8 @@ public class RelacionDeDependencia extends TipoTrabajador{
 		return "RelacionDeDependencia [reciboDeSueldo=" + reciboDeSueldo + "]";
 	}
 
-	public RelacionDeDependencia(String reciboDeSueldo) {
-		super();
+	public RelacionDeDependencia(long id, String reciboDeSueldo) {
+		super(id);
 		this.reciboDeSueldo = reciboDeSueldo;
 	}
-	
-	
 }

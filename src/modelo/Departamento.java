@@ -19,12 +19,10 @@ public class Departamento extends Propiedad{
 	public String toString() {
 		return "Departamento [expensa=" + expensa + ", montoExpensa=" + montoExpensa + "]";
 	}
-	public Departamento(String ubicacion, String tamaño, String localidad, int cantidadHabitaciones, int cantidadBaños,
-			boolean cochera, String expensa, Double montoExpensa) {
-		super(ubicacion, tamaño, localidad, cantidadHabitaciones, cantidadBaños, cochera);
+	public Departamento(long id, String ubicacion, String tamaño, String localidad, int cantidadHabitaciones,
+			int cantidadBaños, boolean cochera, String expensa, double montoExpensa) {
+		super(id, ubicacion, tamaño, localidad, cantidadHabitaciones, cantidadBaños, cochera);
 		this.expensa = expensa;
 		this.montoExpensa = montoExpensa;
 	}
-	
-	
 }

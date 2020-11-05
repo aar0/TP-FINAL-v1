@@ -1,15 +1,15 @@
 package modelo;
 
 public class Arancel {
-	private int numeroDeArancel;
+	private long numeroDeArancel;
 	private double montoDeArancel;
 	private double montoTotalDeArancel;
 	private int diasDeMora;
 	private boolean pagado;
-	public int getNumeroDeArancel() {
+	public long getNumeroDeArancel() {
 		return numeroDeArancel;
 	}
-	public void setNumeroDeArancel(int numeroDeArancel) {
+	public void setNumeroDeArancel(long numeroDeArancel) {
 		this.numeroDeArancel = numeroDeArancel;
 	}
 	public double getMontoDeArancel() {
@@ -42,7 +42,7 @@ public class Arancel {
 				+ ", montoTotalDeArancel=" + montoTotalDeArancel + ", diasDeMora=" + diasDeMora + ", pagado=" + pagado
 				+ "]";
 	}
-	public Arancel(int numeroDeArancel, double montoDeArancel, double montoTotalDeArancel, int diasDeMora,
+	public Arancel(long numeroDeArancel, double montoDeArancel, double montoTotalDeArancel, int diasDeMora,
 			boolean pagado) {
 		super();
 		this.numeroDeArancel = numeroDeArancel;

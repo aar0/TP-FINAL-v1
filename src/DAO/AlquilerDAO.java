@@ -1,5 +1,7 @@
 package DAO;
 
-public interface AlquilerDAO extends DAO<Alquiler, >{
+import modelo.Alquiler;
+
+public interface AlquilerDAO extends DAO<Alquiler, Long>{
 
 }

@@ -1,11 +1,18 @@
 package modelo;
 
 public class Inmueble {
+	private long id;
 	private String Ubicacion;
 	private String Tamaño;
 	private String Localidad;
 	public String getUbicacion() {
 		return Ubicacion;
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
 	}
 	public void setUbicacion(String ubicacion) {
 		Ubicacion = ubicacion;
@@ -24,13 +31,16 @@ public class Inmueble {
 	}
 	@Override
 	public String toString() {
-		return "Inmueble [Ubicacion=" + Ubicacion + ", Tamaño=" + Tamaño + ", Localidad=" + Localidad + "]";
+		return "Inmueble [id=" + id + ", Ubicacion=" + Ubicacion + ", Tamaño=" + Tamaño + ", Localidad=" + Localidad
+				+ "]";
 	}
-	public Inmueble(String ubicacion, String tamaño, String localidad) {
+	public Inmueble(long id, String ubicacion, String tamaño, String localidad) {
 		super();
+		this.id = id;
 		Ubicacion = ubicacion;
 		Tamaño = tamaño;
 		Localidad = localidad;
 	}
+	
 	
 	}

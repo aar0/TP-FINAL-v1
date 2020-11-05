@@ -19,12 +19,13 @@ public class LocalComercial extends Propiedad{
 	public String toString() {
 		return "LocalComercial [expensa=" + expensa + ", montoExpensa=" + montoExpensa + "]";
 	}
-	public LocalComercial(String ubicacion, String tamaño, String localidad, int cantidadHabitaciones,
-			int cantidadBaños, boolean cochera, String expensa, Double montoExpensa) {
-		super(ubicacion, tamaño, localidad, cantidadHabitaciones, cantidadBaños, cochera);
+	public LocalComercial(long id, String ubicacion, String tamaño, String localidad, int cantidadHabitaciones,
+			int cantidadBaños, boolean cochera, String expensa, double montoExpensa) {
+		super(id, ubicacion, tamaño, localidad, cantidadHabitaciones, cantidadBaños, cochera);
 		this.expensa = expensa;
 		this.montoExpensa = montoExpensa;
 	}
+	
 	
 	
 }

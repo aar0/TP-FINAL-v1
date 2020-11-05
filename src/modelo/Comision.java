@@ -1,6 +1,7 @@
 package modelo;
 
 public class Comision {
+	private long id;
 	private String tipoDePago;
 	private double monto;
 	public String getTipoDePago() {
@@ -17,12 +18,18 @@ public class Comision {
 	}
 	@Override
 	public String toString() {
-		return "Comision [tipoDePago=" + tipoDePago + ", monto=" + monto + "]";
+		return "Comision [id=" + id + ", tipoDePago=" + tipoDePago + ", monto=" + monto + "]";
 	}
-	public Comision(String tipoDePago, double monto) {
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public Comision(long id, String tipoDePago, double monto) {
 		super();
+		this.id = id;
 		this.tipoDePago = tipoDePago;
 		this.monto = monto;
 	}
-	
 }

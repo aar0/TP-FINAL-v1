@@ -27,12 +27,13 @@ public class TrabajadorIndependiente extends TipoTrabajador{
 		return "TrabajadorIndependiente [comprobante1=" + comprobante1 + ", comprobante2=" + comprobante2
 				+ ", comprobante3=" + comprobante3 + "]";
 	}
-	public TrabajadorIndependiente(String comprobante1, String comprobante2, String comprobante3) {
-		super();
+	public TrabajadorIndependiente(long id, String comprobante1, String comprobante2, String comprobante3) {
+		super(id);
 		this.comprobante1 = comprobante1;
 		this.comprobante2 = comprobante2;
 		this.comprobante3 = comprobante3;
 	}
+	
 	
 	
 }

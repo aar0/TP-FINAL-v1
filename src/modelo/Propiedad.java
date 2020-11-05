@@ -27,12 +27,13 @@ public class Propiedad extends Inmueble{
 		return "Propiedad [cantidadHabitaciones=" + cantidadHabitaciones + ", cantidadBaños=" + cantidadBaños
 				+ ", cochera=" + cochera + "]";
 	}
-	public Propiedad(String ubicacion, String tamaño, String localidad, int cantidadHabitaciones, int cantidadBaños,
-			boolean cochera) {
-		super(ubicacion, tamaño, localidad);
+	public Propiedad(long id, String ubicacion, String tamaño, String localidad, int cantidadHabitaciones,
+			int cantidadBaños, boolean cochera) {
+		super(id, ubicacion, tamaño, localidad);
 		this.cantidadHabitaciones = cantidadHabitaciones;
 		this.cantidadBaños = cantidadBaños;
 		this.cochera = cochera;
 	}
+
 	
 }
